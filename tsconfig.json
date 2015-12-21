@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES5",
+        "outDir": "bin",
+		"removeComments": true,
+        "sourceMap": true
+    },
+    "files": [
+        "day1/index.ts",
+        "day9/index.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -13,7 +13,7 @@ readFile(path.join(__dirname, 'input.txt'), 'utf8')
                 else
                     return -1;
             }),
-            (result: number, input: number) => result + input,
+            R.add,
             0,
             data.split(''));
         console.log(floor);     

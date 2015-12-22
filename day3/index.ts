@@ -28,7 +28,7 @@ readFile(path.join(__dirname, 'input.txt'), 'utf8')
                     coordinates);
             }, [ { x: 0, y: 0 } ]);
             
-        const results = R.countBy(({ x, y }: Point) : string => '(' + x + ',' + y + ')', presentCoordinates);
+        const results = R.countBy(({ x, y }: Point) : string => `(${x},${y})`, presentCoordinates);
         const gt1 = Object.keys(results).length;
         
         console.log(gt1);

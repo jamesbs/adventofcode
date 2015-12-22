@@ -11,7 +11,7 @@
 	"showOutput": "silent",
 
 	// args is the HelloWorld program to compile.
-	"args": ["day1/index.ts", "day2/index.ts", "day9/index.ts"],
+	"args": ["day1/index.ts", "day2/index.ts", "day3/index.ts", "day9/index.ts"],
 
     "module": "commonjs",
 	

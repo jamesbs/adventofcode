@@ -9,6 +9,7 @@
     "files": [
         "day1/index.ts",
         "day2/index.ts",
+        "day3/index.ts",
         "day9/index.ts"
     ],
     "exclude": [

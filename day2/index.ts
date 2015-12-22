@@ -11,8 +11,6 @@ interface Box {
 
 readFile(path.join(__dirname, 'input.txt'), 'utf8')
     .then((data: string) => {
-        const input : string[] = data.split('\n').slice(0, -1);
-        
         const calculateArea = ( { l, w, h }: Box ): number => {
             return 2 * l * w + 2 * w * h + 2 * h * l + Math.min(l * w, l * h, h * w);
         }; 
@@ -28,7 +26,7 @@ readFile(path.join(__dirname, 'input.txt'), 'utf8')
             transducer,
             R.add,
             0,
-            input
+            data.split('\n').slice(0, -1)
         );
         
         console.log(final);

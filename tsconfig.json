@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "ES5",
+        "target": "ES6",
         "outDir": "bin",
 		"removeComments": true,
         "sourceMap": true
@@ -10,6 +10,7 @@
         "day1/index.ts",
         "day2/index.ts",
         "day3/index.ts",
+        "day4/index.ts",
         "day9/index.ts"
     ],
     "exclude": [

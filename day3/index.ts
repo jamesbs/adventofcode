@@ -21,15 +21,20 @@ function move(point: Point, action: string) : Point {
 
 readFile(path.join(__dirname, 'input.txt'), 'utf8')
     .then((data: string) => {
-        const presentCoordinates = data.split('')
-            .reduce((coordinates: Point[], action: string) : Point[] => {
-                return R.prepend(
-                    move(coordinates[0], action), 
-                    coordinates);
-            }, [ { x: 0, y: 0 } ]);
-            
-        const results = R.countBy(({ x, y }: Point) : string => `(${x},${y})`, presentCoordinates);
-        const gt1 = Object.keys(results).length;
-        
-        console.log(gt1);
+        const actions = data.split('');
+        const presentCoordinates = (startingCoordinates : Point[]) =>
+            actions.reduce(
+                (coordinates: Point[], action: string) : Point[] =>
+                    R.prepend(
+                        move(coordinates[startingCoordinates.length - 1], action), 
+                        coordinates), 
+                startingCoordinates);
+
+        const numHousesGt1 = R.compose(
+            (results) => Object.keys(results).length,
+            R.countBy(({ x, y }: Point) : string => `(${x},${y})`),
+            presentCoordinates
+        );
+        console.log('part 1: ' + numHousesGt1([ { x: 0, y: 0 } ]));
+        console.log('part 2: ' + numHousesGt1([ { x: 0, y: 0 }, { x: 0, y: 0 } ]));
     });

@@ -23,10 +23,8 @@ readFile(path.join(__dirname, 'input.txt'), 'utf8')
         
         const niceStringsPt2 = countStrings(R.map((s: string) => {
             if (   s.search(/([a-z]{2}).*\1/i) !== -1
-                && s.search(/([a-z])[a-z]\1/i) !== -1) {
-                    //console.log(s);
+                && s.search(/([a-z])[a-z]\1/i) !== -1)
                 return 1;
-            }
             else
                 return 0;
         }));

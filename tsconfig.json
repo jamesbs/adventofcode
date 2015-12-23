@@ -11,6 +11,7 @@
         "day2/index.ts",
         "day3/index.ts",
         "day4/index.ts",
+        "day5/index.ts",
         "day9/index.ts"
     ],
     "exclude": [

@@ -29,5 +29,3 @@ while(p2Key === -1 || p1Key === -1) {
 
 console.log('part 1: ' + p1Key);
 console.log('part 2: ' + p2Key);
-
-//console.log(getNum() - 1);
